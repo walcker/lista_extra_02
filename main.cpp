@@ -7,11 +7,24 @@ using namespace std;
 
 int main() {
 
-    vector<Usuario> cadastro;
-    Usuario u;
-    u.nome = "Walcker";
+  //Permite usar acentos
+    setlocale(LC_ALL,"");
 
-    cout << "Nome: " << u.Nome() << endl;
+    string aux;
+    vector<string> cadastro;
+    Usuario u;
+    while(u.nome != "exit"){
+      cout << "Insira o nome do usário ou excreva 'exit' para sair" << endl;
+      cin >> aux;
+      u.nome = aux; 
+      cadastro.push_back(u.nome);     
+    }
+
+    
+     cout << "Nomes cadastrados: ";
+     for(auto i = cadastro.begin() ;i != cadastro.end(); i++){
+      cout << " " << *i;
+    }
   
     return 0;
 }
