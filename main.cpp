@@ -16,11 +16,9 @@ int main() {
     while(u.nome != "exit"){
       cout << "Insira o nome do usário ou excreva 'exit' para sair" << endl;
       cin >> aux;
-      u.nome = aux; 
-      cadastro.push_back(u.nome);     
-    }
-
-    
+      u.nome = aux;
+      cadastro.push_back(u.nome);   
+    }    
      cout << "Nomes cadastrados: ";
      for(auto i = cadastro.begin() ;i != cadastro.end(); i++){
       cout << " " << *i;
